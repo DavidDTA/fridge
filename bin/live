@@ -1,0 +1,10 @@
+#! /usr/bin/env nix-shell
+#! nix-shell --pure
+#! nix-shell -p vim
+#! nix-shell -p tmux
+#! nix-shell -p "let pkgs = import <nixpkgs> {}; in pkgs.callPackage (fetchTarball https://gist.github.com/supermario/e34de4ee5b37c54041320be7dd252e6b/archive/333def480d6dba5bce7f65f03d608311118a961c.zip) {}"
+#! nix-shell -i "bin/isolate sh"
+
+tmux new-session -x- -y- bash \;\
+  set mouse on \;\
+  new-window -d 'lamdera live || sleep infinity'

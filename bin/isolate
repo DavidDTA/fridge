@@ -1,0 +1,4 @@
+#! /usr/bin/sh
+export HOME=$PWD/build/volumes/home
+mkdir -p $home
+"$@"

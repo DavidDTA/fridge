@@ -1,0 +1,7 @@
+#! /usr/bin/env nix-shell
+#! nix-shell --pure
+#! nix-shell -p elmPackages.elm
+#! nix-shell -p elmPackages.elm-format
+#! nix-shell -i "bin/isolate sh"
+
+elm-format src --yes
